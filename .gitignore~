@@ -1,1 +1,4 @@
-
+kevin-damen-env/
+db.sqlite3
+node_modules/
+fun_planner/migrations/
