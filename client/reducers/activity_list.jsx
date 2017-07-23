@@ -1,5 +1,6 @@
 import { REMOVE_ACTIVITY } from '../actions/index';
 import { FETCH_ACTIVITY_LIST } from '../actions/index';
+import _ from 'underscore';
 
 const INITIAL_STATE = [
     {
@@ -25,11 +26,9 @@ const INITIAL_STATE = [
 export default function(state=INITIAL_STATE, action) {
   switch (action.type) {
     case REMOVE_ACTIVITY:
-        console.log('remove this:')
-        console.log(action.payload)
-        console.log('from:')
-        console.log(state)
-        return state
+        
+        return _.difference(state, [action.payload])
+        
     case "FETCH_ACTIVITY_LIST":
         return state
     default:
