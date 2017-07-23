@@ -11,11 +11,11 @@ module.exports = {
   },
   plugins: [
     new BundleTracker({filename: './webpack-stats.json'}),
-    new webpack.ProvidePlugin({ 
-            $: 'jquery',
-            jQuery: 'jquery',
-            'window.jQuery': 'jquery' 
-        }) // !!!!Allows jquery to be used!!!
+    // new webpack.ProvidePlugin({ 
+    //         $: 'jquery',
+    //         jQuery: 'jquery',
+    //         'window.jQuery': 'jquery' 
+    //     })  !!!!Allows jquery to be used!!!
   ],
   module: {
     loaders: [
