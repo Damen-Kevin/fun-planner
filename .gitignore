@@ -1,5 +1,7 @@
 kevin-damen-env/
-db.sqlite3
+fun_planner_env/
 node_modules/
+
+db.sqlite3
+
 *.pyc
-fun-planner-env/
