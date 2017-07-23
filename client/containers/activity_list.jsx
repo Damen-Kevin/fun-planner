@@ -7,6 +7,7 @@ import Activity from './activity';
 
 class ActivityList extends Component {
     renderTableData() {
+        console.log('activity_list in ActivityList', this.props.activity_list);
         return (
             this.props.activity_list.map((activity) => {
                 return (
