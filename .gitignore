@@ -1,7 +1,13 @@
 kevin-damen-env/
 fun_planner_env/
 node_modules/
+static/js/bundle/
+
+*/migrations/*
 
 db.sqlite3
 
 *.pyc
+
+webpack-stats.json
+

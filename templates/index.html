@@ -1,1 +1,11 @@
-<h1>hellowooorld</h1>
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello React title</title>
+    </head>
+    <body>
+        <div id="container"></div>
+        {% render_bundle 'main' %}
+    </body>
+</html>
