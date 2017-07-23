@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import ActivityList from '../containers/activity_list';
+import { fetchActivityList } from '../actions/index';
 
 
-export default class Page extends Component {
+class Page extends Component {
+    componentDidMount() {
+      axios.get('/api/activities').then((res) => {
+        console.log(res.data);
+        this.props.fetch_activity_list(res.data);
+      });
+    }
+
     render() {
         return (
             <div>
@@ -14,3 +25,9 @@ export default class Page extends Component {
         )
     }
 }
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({ fetch_activity_list: fetchActivityList }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(Page);

@@ -29,8 +29,8 @@ export default function(state=INITIAL_STATE, action) {
         
         return _.difference(state, [action.payload])
         
-    case "FETCH_ACTIVITY_LIST":
-        return state
+    case FETCH_ACTIVITY_LIST:
+        return action.payload;
     default:
         return state
   }
