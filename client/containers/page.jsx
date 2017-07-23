@@ -10,7 +10,6 @@ import { fetchActivityList } from '../actions/index';
 class Page extends Component {
     componentDidMount() {
       axios.get('/api/activities').then((res) => {
-        console.log(res.data);
         this.props.fetch_activity_list(res.data);
       });
     }
@@ -19,7 +18,7 @@ class Page extends Component {
         return (
             <div>
                 <div className="myNavBar">Navbar</div>
-                    <ActivityList/>
+                <ActivityList/>
                 <div className="myFooter">Footer</div>
             </div>
         )
