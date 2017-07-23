@@ -3,7 +3,8 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import ActivityList from '../containers/activity_list';
+import ActivityList from './activity_list';
+import ActivityInfo from './activity_info';
 import { fetchActivityList } from '../actions/index';
 
 
@@ -19,6 +20,7 @@ class Page extends Component {
             <div>
                 <div className="myNavBar">Navbar</div>
                 <ActivityList/>
+                <ActivityInfo/>
                 <div className="myFooter">Footer</div>
             </div>
         )
