@@ -2,6 +2,7 @@ kevin-damen-env/
 fun_planner_env/
 node_modules/
 static/js/bundle/
+media/*
 
 */migrations/*
 
