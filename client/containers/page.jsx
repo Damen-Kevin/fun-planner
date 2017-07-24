@@ -3,14 +3,14 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import ActivityList from '../containers/activity_list';
+import ActivityList from './activity_list';
+import ActivityInfo from './activity_info';
 import { fetchActivityList } from '../actions/index';
 
 
 class Page extends Component {
     componentDidMount() {
       axios.get('/api/activities').then((res) => {
-        console.log(res.data);
         this.props.fetch_activity_list(res.data);
       });
     }
@@ -19,7 +19,8 @@ class Page extends Component {
         return (
             <div>
                 <div className="myNavBar">Navbar</div>
-                    <ActivityList/>
+                <ActivityList/>
+                <ActivityInfo/>
                 <div className="myFooter">Footer</div>
             </div>
         )
