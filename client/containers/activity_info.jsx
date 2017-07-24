@@ -5,19 +5,20 @@ import { connect } from 'react-redux';
 
 class ActivityInfo extends Component {
     render() {
-        const { title, location, category } = this.props.activity;
-        return (
-            <div>
-                <br/>
-                <div>{title}</div>
-                <div>{location}</div>
-                <div>*Priority*</div>
-                <div>*Image*</div>
-                <div>{category}</div>
-                <div>*notes*</div>
-                <br/>
-            </div>
-        );
+        if(this.props.activity) {
+            const { title, location, priority, image, category, notes } = this.props.activity;
+            return (
+                <div>
+                    <br/>
+                    <div>Title: {title}</div>
+                    <div>Location: {location}</div>
+                    <div>Priority: {priority}</div>
+                    <div>Category: {category}</div>
+                    <div>Notes: {notes}</div>
+                    <br/>
+                </div>
+            );
+        } return null;   
     }
 }
 

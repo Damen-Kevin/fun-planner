@@ -1,6 +1,6 @@
 import { DISPLAY_ACTIVITY_INFO } from '../actions/index';
 
-const INITIAL_STATE = {};
+const INITIAL_STATE = null;
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
