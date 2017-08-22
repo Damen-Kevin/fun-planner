@@ -10,11 +10,9 @@ import { fetchActivityList } from '../actions/index';
 
 class Page extends Component {
     componentDidMount() {
-      axios.get('/api/activities').then((res) => {
-        this.props.fetch_activity_list(res.data);
-      });
-    }
-
+        this.props.fetch_activity_list();
+    };
+    
     render() {
         return (
             <div>

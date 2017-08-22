@@ -1,5 +1,7 @@
 {% load render_bundle from webpack_loader %}
+
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -13,12 +15,12 @@
         <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
     </head>
+
     <body>
-        <div class="container">
-            
-        </div>
+        <div id="app"></div>
         {% render_bundle 'main' %}
     </body>
+    
 </html>
 
 {% load render_bundle from webpack_loader %}
