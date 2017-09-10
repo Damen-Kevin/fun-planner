@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -10,11 +9,9 @@ import { fetchActivityList } from '../actions/index';
 
 class Page extends Component {
     componentDidMount() {
-      axios.get('/api/activities').then((res) => {
-        this.props.fetch_activity_list(res.data);
-      });
-    }
-
+        this.props.fetch_activity_list();
+    };
+    
     render() {
         return (
             <div>
